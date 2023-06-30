@@ -34,10 +34,14 @@ const tweetsArray = [
   },
 ];
 
+const tweetList = () => tweetsArray.map(tweet => (
+ <Tweet image={ tweet.user.image } userData={ tweet.user } time={ tweet.timestamp }/>
+))
+
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {tweetList()}
     </div>
   );
 }
