@@ -35,7 +35,7 @@ const tweetsArray = [
 ];
 
 const tweetList = () => tweetsArray.map(tweet => (
- <Tweet image={ tweet.user.image } userData={ tweet.user } time={ tweet.timestamp }/>
+ <Tweet image={ tweet.user.image } userData={ tweet.user } time={ tweet.timestamp } message={ tweet.message }/>
 ))
 
 function App() {

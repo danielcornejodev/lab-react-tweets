@@ -1,10 +1,11 @@
 import ProfileImage from './ProfileImage';
 import User from './User';
-import Timestamp from './Timestamp'
+import Timestamp from './Timestamp';
+import Message from './Message';
+import Actions from './Actions';
 
-function Tweet({image, userData, time}) {
-console.log({image, userData, time})
-
+function Tweet({image, userData, time, message}) {
+  console.log(message)
   return (
     <div className="tweet">
       <ProfileImage image={image} />
@@ -16,18 +17,9 @@ console.log({image, userData, time})
           <Timestamp time={time} />
         </div>
 
-        <p className="message">
-          On December 7th, we will be hosting a #webinar that will introduce you
-          to #SQL! Are you ready? 🚀
-        </p>
+        <Message message={message} />
 
-        <div className="actions">
-          {/* Font Awesome icons */}
-          <i className="far fa-comment"></i>
-          <i className="fas fa-retweet"></i>
-          <i className="far fa-heart"></i>
-          <i className="fas fa-share"></i>
-        </div>
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
